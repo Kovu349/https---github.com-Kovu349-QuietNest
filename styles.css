@@ -1,0 +1,376 @@
+:root {
+    --primary: #1f2933;   /* deep calm gray */
+    --accent: #2563eb;    /* soft blue */
+    --background: #ffffff;
+    --muted: #6b7280;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--background);
+  color: var(--primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* NAVIGATION BAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 5%;
+    background-color: var(--background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    position: absolute;
+    left: 1%;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background-color: rgba(103, 172, 103, 0.15);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.nav-links ul li a {
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: var(--accent);
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 3rem 5% 4rem 1%;
+    max-width: 900px;
+}
+
+.hero-content h3 {
+    color: rgb(103, 172, 103);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+
+/*THE PROBLEM */
+.the-problem {
+    background: rgb(244, 240, 240);
+    padding: 3rem 5% 4rem 1%;
+    width: 100%;
+}
+
+.the-problem-inner h3 {
+    color: rgb(103, 172, 103);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.problem-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.problem-icon {
+    background-color: rgba(103, 172, 103, 0.15);
+    color: rgb(103, 172, 103);
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.problem-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+
+/* HOW IT WORKS SECTION */
+.how-it-works {
+    background: rgba(244,240,240);
+    padding: 3rem 5% 4rem 1%;
+    width: 100%;
+}
+
+.how-it-works h3 {
+    color: rgb(103, 172, 103);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.step-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(103, 172, 103);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-line {
+    width: 2px;
+    height: 40px;
+    background-color: rgb(103, 172, 103);
+    opacity: 0.3;
+    margin-top: 3px;
+}
+
+.step-content {
+    padding-bottom: 2rem;
+}
+
+.step-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.step-content p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/*HOST FORMS SECTION */
+.host-form {
+    padding: 4rem 5%;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--background);
+}
+
+.host-form h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.host-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.host-form label {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+.host-form input,
+.host-form select,
+.host-form textarea {
+    width: 100%;
+    padding: 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.host-form input:focus,
+.host-form select:focus,
+.host-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.host-form input::placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+.host-form select {
+    color: #9ca3af; 
+}
+
+.host-form select:valid {
+    color: var(--primary); 
+}
+
+.host-form button[type="submit"] {
+    background-color: var(--accent);
+    color: var(--background);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.host-form button[type="submit"]:hover {
+    background-color: #3d8569;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 155, 127, 0.3);
+}
+
+/* CUSTOM ALERT MESSAGE */
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--accent);
+    color: var(--background);
+    font-family: 'Nunito', sans-serif;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    display: none; /* hidden by default */
+    max-width: 400px;
+    text-align: center;
+    z-index: 2000;
+}
+
+.custom-alert button {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--background);
+    color: var(--accent);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-alert button:hover {
+    background-color: #e5e5e5;
+}
+
+/* FOOTER SECTION */
+.footer {
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}

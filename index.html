@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuietNest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <header class="navbar">
+        <div class="logo">
+            <img src="leaf.png" alt="QuietNest Leaf Logo" class="logo-icon">
+            <span>QuietNest</span>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#host-form">List your Space</a></li>
+            </ul>
+        </nav>  
+    </header>
+
+    <!--HERO SECTION-->
+    <section class="hero">
+        <div class="hero-content">
+            <h3>FOR HOSTS</h3>
+            <h1>Turn your quiet space into income</h1>
+            <p>Students and professionals need peaceful places to focus. Your unused room could be their perfect sanctuary.</p>
+        </div>
+    </section>
+
+    <!--THE PROBLEM-->
+    <section class="the-problem">
+        <div class="the-problem-inner">
+            <h3>The problem</h3>
+            <h1>Finding focus is harder than ever</h1>
+        </div>
+        <div class="problem-cards">
+            <div class="problem-card">
+                <div class="problem-icon">📖</div>
+                <div class="problem-text">
+                    <h3>Libraries are packed</h3>
+                    <p>Every seat taken during finals, exams, and deadlines</p>
+                </div>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">☕</div>
+                <div class="problem-text">
+                    <h3>Cafes are noisy</h3>
+                    <p>Music, chatter, and espresso machines are not conducive to deep work</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--HOW IT WORKS-->
+    <section id="how-it-works" class="how-it-works">
+        <h3>How It Works</h3>
+        <h2>Start hosting in 3 simple steps</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-left">
+                    <div class="step-number">1</div>
+                    <div class="step-line"></div>
+                </div>
+                <div class="step-content">
+                    <h3>List your space</h3>
+                    <p>Describe your quiet room, set your hours, and choose your price</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-left">
+                    <div class="step-number">2</div>
+                    <div class="step-line"></div>
+                </div>
+                <div class="step-content">
+                    <h3>Accept bookings</h3>
+                    <p>Review requests from students and professionals in your area</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-left">
+                    <div class="step-number">3</div>
+                </div>
+                <div class="step-content">
+                    <h3>Earn income</h3>
+                    <p>Get paid for helping others find their focus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HOST FORM -->
+    <section id="host-form" class="host-form">
+        <h2>List your Space</h2>
+
+        <form id="hostForm" action="https://script.google.com/macros/s/AKfycbwNi-ofsteCYx1zFC2gAhBarIAHhUdzsJ1Q8Cd7WQahrhpmijh1bsGR88PTe51I0B5B/exec" 
+        method="POST" 
+        target="hidden_iframe">
+
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="city">City *</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="capacity">Capacity (people) *</label>
+        <input type="text" id="capacity" name="capacity" required>
+
+        <label for="space-type">Type of Space *</label>
+        <select id="space-type" name="spaceType" required>
+            <option value="" disabled selected>Select a space type</option>
+            <option value="Bedroom">Bedroom</option>
+            <option value="Home Office">Home Office</option>
+            <option value="Meeting Room">Meeting Room</option>
+            <option value="Classroom">Classroom</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <textarea id="other-space" name="otherSpace" placeholder="Please describe your space" style="display:none;"></textarea>
+
+        <label for="hours">Available Hours *</label>
+        <input type="text" id="hours" name="hours" required>
+
+        <label for="price">Estimated Price per Hour ($) *</label>
+        <input type="number" id="price" name="price" min="1" max="200" required>
+
+        <label for="description">Short Description (Optional)</label>
+        <textarea id="description" name="description"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Hidden iframe to handle Google Apps Script response -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+
+    <!-- Custom Alert -->
+    <div id="custom-alert" class="custom-alert">
+        <p id="custom-alert-message"></p>
+        <button id="custom-alert-close">OK</button>
+    </div>
+    </section>
+
+
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <p>&copy; 2026 QuietNest. All rights reserved.</p>
+    </footer>
+
+
+    
+
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
