@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Space - QuietHaven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+    <!--NAVIGATION BAR-->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="leaf.png" alt="QuietHaven Logo" class="logo-icon">
+            <span>QuietHaven</span>
+        </a>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="for-hosts.html">For Hosts</a></li>
+                <li><a href="find-space.html">Find a Space</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!--RENTER HERO-->
+    <section class="renter-hero">
+        <div class="renter-hero-content">
+            <h1 class="renter-hero-title">Find your quiet space</h1>
+            <p class="renter-hero-description">Discover peaceful spaces near you to work, study, or relax. Browse listings, book your spot, and enjoy a calm environment whenever you need it.</p>
+        </div>
+    </section>
+
+
+    <!--SEARCH AND FILTER-->
+    <section id="renter-form" class="renter-form">
+        <div class="search-filter-container">
+            <div class="search-box">
+                <input type="text" placeholder="Search by location, space type, or capacity..." class="search-input">
+            </div>
+            
+            <div class="filter-icon-box" id="filterToggle">
+                <img src="filter.png" alt="Filter Icon" class="filter-icon">
+            </div>
+        </div>
+        
+        <div class="filter-options" id="filterOptions">
+            <div class="filter-item">
+                <input type="checkbox" id="free">
+                <label for="free">Free</label>
+            </div>
+            <div class="filter-item">
+                <input type="checkbox" id="paid">
+                <label for="paid">Paid</label>
+            </div>
+        </div>
+    </section>
+
+
+    <!--SPACE LISTINGS-->
+    <section class="spaces-section">
+        <div class="spaces-grid" id="spacesGrid">
+            <!-- Cards will appear here automatically! -->
+        </div>
+    </section>
+
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="leaf.png" alt="QuietHaven Logo" class="footer-logo-icon">
+                    <span>QuietHaven</span>
+                </div>
+                <p class="footer-tagline">
+                    Connecting quiet spaces with those who need them. Find your focus, share your calm.
+                </p>
+            </div>
+            <p>&copy; 2026 QuietHaven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- BOOKING MODAL --> <div class="modal-overlay" id="modalOverlay"> <div class="modal"> <button class="modal-close" id="modalClose">✕</button> <h2 class="modal-title">Request Booking</h2> <p class="modal-subtitle" id="modalSubtitle"></p> <form id="bookingForm"> <div class="modal-row"> <div class="modal-field"> <label for="renter-name">Your Name</label> <input type="text" id="renter-name" placeholder="Jane Smith" required> </div> <div class="modal-field"> <label for="renter-email">Email</label> <input type="email" id="renter-email" placeholder="jane@example.com" required> </div> </div> <div class="modal-field"> <label for="booking-date">📅 Preferred Date</label> <input type="date" id="booking-date" required> </div> <div class="modal-row"> <div class="modal-field"> <label for="start-time">🕐 Start Time</label> <select id="start-time" required> <option value="" disabled selected>Select time</option> <option>6:00 AM</option> <option>7:00 AM</option> <option>8:00 AM</option> <option>9:00 AM</option> <option>10:00 AM</option> <option>11:00 AM</option> <option>12:00 PM</option> <option>1:00 PM</option> <option>2:00 PM</option> <option>3:00 PM</option> <option>4:00 PM</option> <option>5:00 PM</option> <option>6:00 PM</option> <option>7:00 PM</option> <option>8:00 PM</option> </select> </div> <div class="modal-field"> <label for="duration">Duration</label> <select id="duration" required> <option value="" disabled selected>Select duration</option> <option>1 hour</option> <option>2 hours</option> <option>3 hours</option> <option>4 hours</option> <option>5 hours</option> <option>6 hours</option> <option>7 hours</option> <option>8 hours</option> </select> </div> </div> <div class="modal-field"> <label for="num-people">👥 Number of People</label> <input type="number" id="num-people" min="1" value="1" required> </div> <button type="submit" class="modal-submit">Send Booking Request</button> </form> </div> </div>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+</body>
+</html>

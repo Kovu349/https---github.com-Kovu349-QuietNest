@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!--NAVIGATION BAR-->
     <header class="navbar">
         <div class="logo">
@@ -18,8 +19,8 @@
         </div>
         <nav class="nav-links">
             <ul>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#host-form">List your Space</a></li>
+                <li><a href="for-hosts.html">For Hosts</a></li>
+                <li><a href="find-space.html">Find a Space</a></li>
             </ul>
         </nav>  
     </header>
@@ -27,136 +28,116 @@
     <!--HERO SECTION-->
     <section class="hero">
         <div class="hero-content">
-            <h3>FOR HOSTS</h3>
-            <h1>Turn your quiet space into income</h1>
-            <p>Students and professionals need peaceful places to focus. Your unused room could be their perfect sanctuary.</p>
+            <div class="hero-badge">
+                🟢 A calmer way to work & study
+            </div>
+
+            <h1 class="hero-title">
+                Turn Quiet Spaces <br> 
+                <span class="hero-title-accent">Into Oppurtunity</span>
+            </h1>
+
+            <p class="hero-description">QuietHaven connects people who have peaceful, underused rooms with those who need a calm place to focus. List your space or find your next productive haven.</p>
+            
         </div>
     </section>
 
-    <!--THE PROBLEM-->
-    <section class="the-problem">
-        <div class="the-problem-inner">
-            <h3>The problem</h3>
-            <h1>Finding focus is harder than ever</h1>
-        </div>
-        <div class="problem-cards">
-            <div class="problem-card">
-                <div class="problem-icon">📖</div>
-                <div class="problem-text">
-                    <h3>Libraries are packed</h3>
-                    <p>Every seat taken during finals, exams, and deadlines</p>
-                </div>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">☕</div>
-                <div class="problem-text">
-                    <h3>Cafes are noisy</h3>
-                    <p>Music, chatter, and espresso machines are not conducive to deep work</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!--HOW IT WORKS-->
     <section id="how-it-works" class="how-it-works">
-        <h3>How It Works</h3>
-        <h2>Start hosting in 3 simple steps</h2>
-        <div class="steps">
-            <div class="step">
-                <div class="step-left">
-                    <div class="step-number">1</div>
-                    <div class="step-line"></div>
-                </div>
-                <div class="step-content">
-                    <h3>List your space</h3>
-                    <p>Describe your quiet room, set your hours, and choose your price</p>
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-left">
-                    <div class="step-number">2</div>
-                    <div class="step-line"></div>
-                </div>
-                <div class="step-content">
-                    <h3>Accept bookings</h3>
-                    <p>Review requests from students and professionals in your area</p>
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-left">
-                    <div class="step-number">3</div>
-                </div>
-                <div class="step-content">
-                    <h3>Earn income</h3>
-                    <p>Get paid for helping others find their focus</p>
-                </div>
-            </div>
+        <div class="section-header">
+            <h3 class="section-title">How It Works</h3>
+            <h2 class="section-subtitle">3 simple steps to start hosting or find your next quiet workspace.</h2>
         </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">🏠</div>
+                    <div class="step-tag">HOST</div>
+                    <h1 class="step-title">List your quiet space</h1>
+                    <p class="step-description">Sign up, describe your room, <br> set up your price and availablity. <br> It takes just a few minutes.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">🔍</div>
+                    <div class="step-tag">RENTER</div>
+                    <h1 class="step-title">Find and book a space</h1>
+                    <p class="step-description">Browse available rooms near <br> you, check details, and send a <br> booking request instantly.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">💰</div>
+                    <div class="step-tag">EARN / FOCUS</div>
+                    <h1 class="step-title">Earn income or get to work</h1>
+                    <p class="step-description">Hosts earn from every booking. <br> Renters get a <br> peaceful place to study, work, or create.</p>
+                </div>
+            </div>
     </section>
 
 
-    <!-- HOST FORM -->
-    <section id="host-form" class="host-form">
-        <h2>List your Space</h2>
-
-        <form id="hostForm" action="https://script.google.com/macros/s/AKfycbwNi-ofsteCYx1zFC2gAhBarIAHhUdzsJ1Q8Cd7WQahrhpmijh1bsGR88PTe51I0B5B/exec" 
-        method="POST" 
-        target="hidden_iframe">
-
-        <label for="name">Full Name *</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email Address *</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="city">City *</label>
-        <input type="text" id="city" name="city" required>
-
-        <label for="capacity">Capacity (people) *</label>
-        <input type="text" id="capacity" name="capacity" required>
-
-        <label for="space-type">Type of Space *</label>
-        <select id="space-type" name="spaceType" required>
-            <option value="" disabled selected>Select a space type</option>
-            <option value="Bedroom">Bedroom</option>
-            <option value="Home Office">Home Office</option>
-            <option value="Meeting Room">Meeting Room</option>
-            <option value="Classroom">Classroom</option>
-            <option value="Other">Other</option>
-        </select>
-
-        <textarea id="other-space" name="otherSpace" placeholder="Please describe your space" style="display:none;"></textarea>
-
-        <label for="hours">Available Hours *</label>
-        <input type="text" id="hours" name="hours" required>
-
-        <label for="price">Estimated Price per Hour ($) *</label>
-        <input type="number" id="price" name="price" min="1" max="200" required>
-
-        <label for="description">Short Description (Optional)</label>
-        <textarea id="description" name="description"></textarea>
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <!-- Hidden iframe to handle Google Apps Script response -->
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    <!--WHO IT'S FOR-->
+    <section id="who-its-for" clas="who-its-for">
+        <div class="section-header">
+            <h3 class="section-title">Who It's For</h3>
+            <h2 class="section-subtitle">QuietHaven serves anyone who values focused, peaceful environments—whether <br> you have a space to share or need one to use.</h2>
+        </div>
+        <div class="person-cards">
+            <div class="person-card">
+                <div class="person-icon">🏠</div>
+                <h3 class="person-title">Homeowners</h3>
+                <p class="person-description">Monetize your spare bedroom, guest house, or home office when it's sitting empty.</p>
+            </div>
+            <div class="person-card">
+                <div class="person-icon">🎓</div>
+                <h3 class="person-title">Students</h3>
+                <p class="person-description">Find affordable, distraction-free spaces near campus for studying and projects.</p>
+            </div>
+            <div class="person-card">
+                <div class="person-icon">💼</div>
+                <h3 class="person-title">Remote workers</h3>
+                <p class="person-description">Escape the coffee shop. Book a real desk in a quiet, private room by the hour.</p>
+            </div>
+            <div class="person-card">
+                <div class="person-icon">📚</div>
+                <h3 class="person-title">Tutors and Coaches</h3>
+                <p class="person-description">Meet clients in a professional, quiet space without renting a full office.</p>
+            </div>
+            <div class="person-card">
+                <div class="person-icon">⛪</div>
+                <h3 class="person-title">Churches and orgs</h3>
+                <p class="person-description">Put classrooms and meeting rooms to work during off-hours to support your community.</p>
+            </div>
+            <div class="person-card">
+                <div class="person-icon">👥</div>
+                <h3 class="person-title">Small businesses</h3>
+                <p class="person-description">Host client meetings or team sessions in calm, well-appointed spaces on demand.</p>
+            </div>
+        </div>
 
 
-    <!-- Custom Alert -->
-    <div id="custom-alert" class="custom-alert">
-        <p id="custom-alert-message"></p>
-        <button id="custom-alert-close">OK</button>
-    </div>
+
+
+
+
+
     </section>
 
 
 
     <!--FOOTER-->
     <footer class="footer">
-        <p>&copy; 2026 QuietNest. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="leaf.png" alt="QuietHaven Logo" class="footer-logo-icon">
+                    <span>QuietHaven</span>
+                </div>
+                <p class="footer-tagline">
+                    Connecting quiet spaces with those who need them. Find your focus, share your calm.
+                </p>
+            </div>
+            <p>&copy; 2026 QuietHaven. All rights reserved.</p>
+        </div>
     </footer>
 
 

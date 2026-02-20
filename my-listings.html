@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Listings - QuietHaven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="leaf.png" alt="QuietHaven Logo" class="logo-icon">
+            <span>QuietHaven</span>
+        </a>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="for-hosts.html">For Hosts</a></li>
+                <li><a href="find-space.html">Find a Space</a></li>
+                <li><button id="logoutBtn" class="logout-btn">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dashboard-section">
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <h1>My Listings</h1>
+                <a href="for-hosts.html" class="btn-primary">+ Add New Space</a>
+            </div>
+
+            <div id="myListingsGrid" class="my-listings-grid">
+                <!-- Listings will appear here -->
+            </div>
+
+            <div id="noListings" class="no-listings" style="display: none;">
+                <p>You haven't listed any spaces yet.</p>
+                <a href="for-hosts.html" class="btn-primary">List Your First Space</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="leaf.png" alt="QuietHaven Logo" class="footer-logo-icon">
+                    <span>QuietHaven</span>
+                </div>
+                <p class="footer-tagline">
+                    Connecting quiet spaces with those who need them. Find your focus, share your calm.
+                </p>
+            </div>
+            <p>&copy; 2026 QuietHaven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
